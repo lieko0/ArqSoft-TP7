@@ -49,10 +49,6 @@
             "Microsoft.CodeAnalysis.CSharp": {
               "target": "Package",
               "version": "[4.11.0, )"
-            },
-            "System.Configuration.ConfigurationManager": {
-              "target": "Package",
-              "version": "(, )"
             }
           },
           "imports": [

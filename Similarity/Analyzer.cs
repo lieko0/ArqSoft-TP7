@@ -1,9 +1,7 @@
-using System.Configuration;
-using System.Collections.Specialized;
 using Similarity.dto;
 using Similarity.utils;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
-
+using System;
 
 namespace Similarity;
 
@@ -12,9 +10,12 @@ public class Analyzer
     private FileClassDeclarations[] ClassDeclarations { get; }
 
     private readonly List<RefactorOportunity> _refactorOpportunities  = new();
+    
+    private readonly Dictionary<string, string> _env;
 
     public Analyzer(IEnumerable<string> files)
     {
+        _env = DotEnv.GetEnv(".env");
         CsFile[] syntaxTrees = files.Select(f => new CsFile(f)).ToArray();
         ClassDeclarations = syntaxTrees.SelectMany(f => f.classDeclarations).ToArray();
     }
@@ -115,13 +116,20 @@ public class Analyzer
                 var iClassMethods = ClassDeclarations[i].classDeclaration.Members.OfType<MethodDeclarationSyntax>().ToList();
                 var jClassMethods = ClassDeclarations[j].classDeclaration.Members.OfType<MethodDeclarationSyntax>().ToList();
 
-                CheckJaccardSimilarity(iClassMethods, jClassMethods, ClassDeclarations[i], ClassDeclarations[j]);
+                
+                if (!_env.TryGetValue("JACCARD_THRESHOLD",out string? threshold))
+                {
+                    Console.WriteLine("JACCARD_THRESHOLD not found in .env file, using default value 0.5");
+                    threshold = "0.5";
+                }
+                
+                CheckJaccardSimilarity(iClassMethods, jClassMethods, ClassDeclarations[i], ClassDeclarations[j], Convert.ToDouble(threshold));
             }
         }
     }
 
     private void CheckJaccardSimilarity(List<MethodDeclarationSyntax> iClassMethods,
-        List<MethodDeclarationSyntax> jClassMethods, FileClassDeclarations i, FileClassDeclarations j, Double threshold = 0.6)
+        List<MethodDeclarationSyntax> jClassMethods, FileClassDeclarations i, FileClassDeclarations j, Double threshold)
     {
         // a = the number of dependencies on both entities,
         // b = the number of dependencies on entity i only,

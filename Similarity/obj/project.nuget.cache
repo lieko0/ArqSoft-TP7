@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "e/YUzossNUs=",
+  "dgSpecHash": "V58e6PKFKPY=",
   "success": true,
   "projectFilePath": "S:\\stuffs\\ArqSoft\\TP7\\Similarity\\Similarity.csproj",
   "expectedPackageFiles": [
@@ -8,20 +8,7 @@
     "C:\\Users\\marco\\.nuget\\packages\\microsoft.codeanalysis.common\\4.11.0\\microsoft.codeanalysis.common.4.11.0.nupkg.sha512",
     "C:\\Users\\marco\\.nuget\\packages\\microsoft.codeanalysis.csharp\\4.11.0\\microsoft.codeanalysis.csharp.4.11.0.nupkg.sha512",
     "C:\\Users\\marco\\.nuget\\packages\\system.collections.immutable\\8.0.0\\system.collections.immutable.8.0.0.nupkg.sha512",
-    "C:\\Users\\marco\\.nuget\\packages\\system.configuration.configurationmanager\\4.4.0\\system.configuration.configurationmanager.4.4.0.nupkg.sha512",
-    "C:\\Users\\marco\\.nuget\\packages\\system.reflection.metadata\\8.0.0\\system.reflection.metadata.8.0.0.nupkg.sha512",
-    "C:\\Users\\marco\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.4.0\\system.security.cryptography.protecteddata.4.4.0.nupkg.sha512"
+    "C:\\Users\\marco\\.nuget\\packages\\system.reflection.metadata\\8.0.0\\system.reflection.metadata.8.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1604",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Project dependency System.Configuration.ConfigurationManager does not contain an inclusive lower bound. Include a lower bound in the dependency version to ensure consistent restore results.",
-      "libraryId": "System.Configuration.ConfigurationManager",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v8.0"
-      ]
-    }
-  ]
+  "logs": []
 }
