@@ -16,6 +16,6 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Similarity
-build_property.ProjectDir = S:\stuffs\ArqSoft\TP7\Similarity\
+build_property.ProjectDir = S:\stuffs\ArqSoft\TP7\ArqSoft-TP7\Similarity\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

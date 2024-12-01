@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "V58e6PKFKPY=",
+  "dgSpecHash": "c6jnM6aoUgg=",
   "success": true,
-  "projectFilePath": "S:\\stuffs\\ArqSoft\\TP7\\Similarity\\Similarity.csproj",
+  "projectFilePath": "S:\\stuffs\\ArqSoft\\TP7\\ArqSoft-TP7\\Similarity\\Similarity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marco\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.4\\microsoft.codeanalysis.analyzers.3.3.4.nupkg.sha512",
     "C:\\Users\\marco\\.nuget\\packages\\microsoft.codeanalysis.common\\4.11.0\\microsoft.codeanalysis.common.4.11.0.nupkg.sha512",

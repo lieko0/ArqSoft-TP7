@@ -961,11 +961,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "S:\\stuffs\\ArqSoft\\TP7\\Similarity\\Similarity.csproj",
+      "projectUniqueName": "S:\\stuffs\\ArqSoft\\TP7\\ArqSoft-TP7\\Similarity\\Similarity.csproj",
       "projectName": "Similarity",
-      "projectPath": "S:\\stuffs\\ArqSoft\\TP7\\Similarity\\Similarity.csproj",
+      "projectPath": "S:\\stuffs\\ArqSoft\\TP7\\ArqSoft-TP7\\Similarity\\Similarity.csproj",
       "packagesPath": "C:\\Users\\marco\\.nuget\\packages\\",
-      "outputPath": "S:\\stuffs\\ArqSoft\\TP7\\Similarity\\obj\\",
+      "outputPath": "S:\\stuffs\\ArqSoft\\TP7\\ArqSoft-TP7\\Similarity\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\marco\\AppData\\Roaming\\NuGet\\NuGet.Config",

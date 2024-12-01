@@ -1,7 +1,6 @@
 using Similarity.dto;
 using Similarity.utils;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
-using System;
 
 namespace Similarity;
 
@@ -137,8 +136,10 @@ public class Analyzer
         // Jaccard a/(a + b + c)
         
         int a = 0;
-        int b = 0;
-        int c = 0;
+        int b;
+        int c;
+        double jaccard;
+        
         var localOpportunities= new List<RefactorOportunity>(); 
         foreach (var iMethod in iClassMethods)
         {
@@ -157,8 +158,9 @@ public class Analyzer
         }
         b = iClassMethods.Count - a;
         c = jClassMethods.Count - a;
+        jaccard = (double) a / (a + b + c);
 
-        if ((double) a / (a + b + c) > threshold)
+        if (jaccard > threshold)
         {
             _refactorOpportunities.AddRange(localOpportunities);
         }
